@@ -1,7 +1,5 @@
 # 多线程进阶---JUC并发编程
 
-==**完整代码传送门，见文章末尾**==
-
 ## 1.Lock锁（重点）
 
 > 传统 Synchronizd
@@ -45,7 +43,7 @@ class Ticket {
 
     public synchronized void sale() {
         if (number > 0) {
-            System.out.println(Thread.currentThread().getName() + "卖出了第" + (50 - (number--)) + "票，剩余：" + number);
+            System.out.println(Thread.currentThread().getName() + "卖出了第" + (50 - (--number)) + "票，剩余：" + number);
         }
     }
 }
@@ -2811,10 +2809,3 @@ class MyThread implements Runnable {
 2. 使用` jstack 进程号 `找到死锁问题
 
 ![](http://imgcloud.duiyi.xyz//data20200516223744.png)
-
-
-
-==**代码传送门：**==
-
-- [gitee](https://gitee.com/ilovemo/juc-study/tree/master#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E8%BF%9B%E9%98%B6---juc%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B)
-- [github](https://github.com/LionelMessi1010/juc-study)

@@ -43,7 +43,7 @@ class Ticket {
 
     public synchronized void sale() {
         if (number > 0) {
-            System.out.println(Thread.currentThread().getName() + "卖出了第" + (50 - (number--)) + "票，剩余：" + number);
+            System.out.println(Thread.currentThread().getName() + "卖出了第" + (50 - (--number)) + "票，剩余：" + number);
         }
     }
 }
